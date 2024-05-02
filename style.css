@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+.cell {
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
