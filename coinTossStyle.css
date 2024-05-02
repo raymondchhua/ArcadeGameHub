@@ -1,0 +1,44 @@
+img {
+    padding-top: 20px;
+}
+h2 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: black;
+}
+
+#resultImg {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+#resultText {
+    font-family:sans-serif;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+  }
+
+#container {
+    background-color:darkgray;
+    border: 2px solid;
+    display: grid;
+    justify-items: center;
+    max-width: 50%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    
+}

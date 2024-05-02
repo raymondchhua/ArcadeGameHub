@@ -1,11 +1,6 @@
-h1 {
-    text-align: left;
-}
-
 a {
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
 }
 
 a:visited {
@@ -16,9 +11,11 @@ a:visited {
     width: 300px;
     height: 300px;
     border: 2px solid;
+    text-align: center;
 }
 
 #cellContainer {
+    padding-top: 150px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
