@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title> Face Flip </title>
         <link rel="stylesheet" href="coinTossStyle.css">
+    </head>
+    <body>
         <a href="index.html">
-            <h1>
+            <h1 id="logo" class="text">
                 Raymond's Games
             </h1>
         </a>
-    </head>
-    <body>
-        <h2>
-            Coin Toss
+        <div class="padding"></div>
+        <h2 class="text">
+            Face Flip <div class="subtitle"> (Coin Toss) </div>
         </h2>
+
         <div id="container">
-            <div id="resultImg"><img src="face_icon.png" alt="Face icon" title="Face icon" ></div>
+            <div id="resultImg"><img id="img" src="face_icon.png" alt="Face icon" title="Face"></div>
             <div id="resultText"></div>
-            <div id="button"><button>Flip</button></div>
+            <div id="flip"><button>Flip</button></div>
         </div>
-        
         <script src="coinTossGame.js"></script>
     </body>
 </html>

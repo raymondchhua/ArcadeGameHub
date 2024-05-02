@@ -1,9 +1,28 @@
+body {
+    background-color: black;
+}
+
+#logo{
+    border: 2px solid;
+    max-width: fit-content;
+    color: white;
+}
+
 img {
     padding-top: 20px;
 }
-h2 {
-    text-align: center;
+
+.subtitle {
+    font-size: large;
+}
+
+.padding {
     padding-top: 100px;
+}
+
+h2 {
+    text-align:center;
+    color: white;
 }
 
 a {
@@ -22,17 +41,20 @@ a:visited {
 }
 
 #resultText {
-    font-family:sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
-    top: 52%;
-    left: 50%;
+    top: 55%;
+    left: 49%;
     transform: translate(-50%, -50%);
     color:white;
   }
 
-#container {
+  #container {
+    position: relative;
     background-color:darkgray;
-    border: 2px solid;
+    border: 2px solid, white;
     display: grid;
     justify-items: center;
     max-width: 50%;
