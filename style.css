@@ -1,9 +1,11 @@
 h1 {
-    text-align: center;
+    text-align: left;
 }
 
 a {
     text-decoration: none;
+    font-weight: bold;
+    text-align: center;
 }
 
 a:visited {
