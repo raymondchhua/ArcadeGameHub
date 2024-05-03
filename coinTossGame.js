@@ -9,18 +9,22 @@ let degrees = 0;
 let spinInterval;
 let invertInterval;
 let lastResult = null;
+let clicked = false;
 
 function startGame() {
     flipButton.addEventListener("click", playAnimation);
 }
 
 function playAnimation() {
-    if (lastResult != null) {
-        resetResult();
-    }
-    spinInterval = setInterval(rotateImg, 5);
-    invertInterval = setInterval(changeImg, 225);
-    setTimeout(stopAnimation, 2225);
+    if (clicked != true) {
+        clicked = true;
+        if (lastResult != null) {
+            resetResult();
+        }
+        spinInterval = setInterval(rotateImg, 5);
+        invertInterval = setInterval(changeImg, 225);
+        setTimeout(stopAnimation, 2225);
+    }   
 }
 
 function stopAnimation() {
@@ -28,6 +32,7 @@ function stopAnimation() {
     clearInterval(invertInterval);
     resetImgRotation();
     displayResult();
+    clicked = false;
 }
 
 function rotateImg() {

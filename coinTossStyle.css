@@ -1,22 +1,17 @@
-body {
-    background-color: black;
-}
-#logo{
-    border: 2px solid;
-    max-width: fit-content;
-    color: white;
-}
-
-img {
-    padding-top: 20px;
-}
-
 .subtitle {
     font-size: large;
 }
 
 .padding {
     padding-top: 100px;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    padding-top: 20px;
 }
 
 h2 {
@@ -27,6 +22,12 @@ h2 {
 a {
     text-decoration: none;
     font-weight: bold;
+}
+
+#logo{
+    border: 2px solid;
+    max-width: fit-content;
+    color: white;
 }
 
 
