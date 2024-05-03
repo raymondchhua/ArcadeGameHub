@@ -53,7 +53,7 @@ a {
     border: 5px solid white;
     display: grid;
     justify-items: center;
-    max-width: 50%;
+    width: 400px;
     margin: auto;
     position: relative;
 }

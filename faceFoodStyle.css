@@ -16,8 +16,8 @@ h2 {
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     text-align: center;
     color: white;
 }
@@ -25,8 +25,8 @@ h2 {
 .container {
     border: 2px solid white;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     justify-items: center;
-    width: 750px;
+    width: 375px;
     margin: auto;
 }
