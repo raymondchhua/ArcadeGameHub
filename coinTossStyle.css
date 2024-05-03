@@ -1,7 +1,6 @@
 body {
     background-color: black;
 }
-
 #logo{
     border: 2px solid;
     max-width: fit-content;
@@ -30,9 +29,6 @@ a {
     font-weight: bold;
 }
 
-a:visited {
-    color: black;
-}
 
 #resultImg {
     width: 300px;
@@ -51,14 +47,14 @@ a:visited {
     color:white;
   }
 
-  #container {
-    position: relative;
+#container {
     background-color:darkgray;
-    border: 2px solid, white;
+    border: 5px solid white;
     display: grid;
     justify-items: center;
     max-width: 50%;
     margin: auto;
+    position: relative;
 }
 
 @media only screen and (max-width: 768px) {
