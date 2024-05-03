@@ -1,4 +1,6 @@
-body {background-color: black;}
+body {
+    background-color: black;
+}
 
 a {
     text-decoration: none;
@@ -15,6 +17,18 @@ h2 {
     color: white;
 }
 
+.buttonContainer {
+    padding: 20px;
+    height: 5px;
+    position: relative;
+ }
+
+.center {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+  }
+  
 .cell {
     width: 75px;
     height: 75px;
@@ -22,8 +36,13 @@ h2 {
     color: white;
 }
 
+footer {
+    background-color: white;
+}
+
 .container {
     border: 2px solid white;
+    background-color: gray;
     display: grid;
     grid-template-columns: repeat(5, auto);
     justify-items: center;

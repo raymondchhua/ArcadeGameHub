@@ -16,9 +16,18 @@ body {
     background-color: black;
 }
 
+footer {
+    background-color: white;
+}
+
 a {
     text-decoration: none;
     font-weight: bold;
+    color: white;
+}
+
+a:visited {
+    color: white;
 }
 
 .title {
@@ -29,8 +38,9 @@ a {
     font-size: large;
 }
 
-a:visited {
-    color: white;
+img {
+    width: 275px;
+    height: 275px;
 }
 
 .cell {
@@ -46,9 +56,6 @@ a:visited {
     grid-template-columns: repeat(3, auto);
     justify-items: center;
     max-width: 100%;
+    width: 1050px;
     margin: auto;
-}
-
-@media only screen and (max-width: 768px) {
-    
 }
