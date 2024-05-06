@@ -75,13 +75,12 @@ function dropFood() {
         let currentLength = foodIndexes.length
         for (let i=0; i < currentLength; i++) {
             let foodIndex = foodIndexes[i];
-            if (foodIndex < 20) {
-                console.log(foodIndex);
-                console.log(cells[foodIndex]);
-                console.log(cells[foodIndex].firstElementChild);
-                let food = cells[foodIndex].firstElementChild;
+            let food = cells[foodIndex].firstElementChild;
+            if (foodIndex < 15) {
                 cells[foodIndex+5].appendChild(food);
                 foodIndexes.push(foodIndex+5);
+            } else {
+                cells[foodIndex].removeChild(food);
             }
         }
         for (let i=0; i < currentLength; i++) {
@@ -93,7 +92,7 @@ function dropFood() {
 function createFood() {
     dropFood();
     let food = createImg("burger");
-    let row = Math.floor(Math.random() * 4)+15;
+    let row = Math.floor(Math.random() * 4);
     cells[row].appendChild(food);
     foodIndexes.push(row);
 }
