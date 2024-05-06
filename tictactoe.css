@@ -10,6 +10,7 @@ a {
 
 footer {
     background-color: white;
+    text-align: center;
 }
 
 div {
@@ -38,8 +39,8 @@ div {
     color: #444; /* Default text color */
 }
 
-.cell.red { color: red; }
-.cell.blue { color: blue; }
+.cell.red { color: white; }
+.cell.blue { color: black; }
 
 .cell:hover {
     background-color: #eaeaea; /* Hover effect for cells */
