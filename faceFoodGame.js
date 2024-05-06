@@ -3,10 +3,11 @@
 window.addEventListener("load", loadGame);
 let startButton = document.getElementById("Start");
 let cells = document.getElementsByClassName("cell");
-console.log(cells);
 let foodInterval;
-
+let foodIndexes = [];
 let started = false;
+let currentSpot;
+let faceCharacter;
 
 function loadGame() {
     startButton.addEventListener("click", startGame);
@@ -16,31 +17,86 @@ function startGame() {
     if (started == false) {
         started = true;
         hideButton();
+        faceCharacter = createFace();
+        document.addEventListener("keydown", (event) => {
+            console.log(faceCharacter)
+            switch (event.code) {
+                case "ArrowLeft":
+                    if (currentSpot > 20) {
+                        currentSpot -= 1;
+                        cells[currentSpot].appendChild(faceCharacter);
+                        
+                    }
+                    break;
+                case "ArrowRight":
+                    if (currentSpot < 24) {
+                        currentSpot += 1;
+                        cells[currentSpot].appendChild(faceCharacter);
+                    }
+                    break;
+            }
+        });
         foodInterval = setInterval(createFood, 1000);
     }
 }
 
+function createImg(type) {
+    let img = document.createElement("img");
+    img.width = "75";
+    img.height = "75";
+    switch (type) {
+        case "burger":
+            img.src = "burger_icon.png";
+            img.alt = "burger";
+
+            break;
+        case "face":
+            img.src = "face_icon.png";
+            img.alt = "face"
+            break;
+    }
+    return img;
+}
+
+function createFace() {
+    let face = createImg("face");
+    cells[22].appendChild(face);
+    currentSpot = 22;
+    return face;
+}
+
+function moveFace(key) {
+    
+}
 function hideButton() {
     startButton.style.opacity = 0;
 }
 
 function dropFood() {
-    for (let i=0; i < cells.length - 5; i++) {
-        let food = cells[i].firstElementChild
-        if (food != null) {
-            console.log(i);
-            cells[i+5].appendChild(food);
+    if (foodIndexes.length > 0) {
+        console.log(foodIndexes);
+        let currentLength = foodIndexes.length
+        for (let i=0; i < currentLength; i++) {
+            let foodIndex = foodIndexes[i];
+            if (foodIndex < 20) {
+                console.log(foodIndex);
+                console.log(cells[foodIndex]);
+                console.log(cells[foodIndex].firstElementChild);
+                let food = cells[foodIndex].firstElementChild;
+                cells[foodIndex+5].appendChild(food);
+                foodIndexes.push(foodIndex+5);
+            }
+        }
+        for (let i=0; i < currentLength; i++) {
+            foodIndexes.shift();
         }
     }
 }
+
 function createFood() {
     dropFood();
-    let food = document.createElement("img");
-    food.src = "burger_icon.png";
-    food.alt = "burger";
-    food.width = "75";
-    food.height = "75";
-
-    let row = Math.floor(Math.random() * 4);
+    let food = createImg("burger");
+    let row = Math.floor(Math.random() * 4)+15;
     cells[row].appendChild(food);
+    foodIndexes.push(row);
 }
