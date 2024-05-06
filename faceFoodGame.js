@@ -65,9 +65,6 @@ function createFace() {
     return face;
 }
 
-function moveFace(key) {
-    
-}
 function hideButton() {
     startButton.style.opacity = 0;
 }
